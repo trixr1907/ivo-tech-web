@@ -1,0 +1,41 @@
+ WARN  Unsupported engine: wanted: {"node":"22.x"} (current: {"node":"v20.11.1","pnpm":"9.0.0"})
+
+> @repo/ui@0.0.0 build C:\Users\admin\Documents\Projects\ivo-tech.com\ivo-tech-web\packages\ui
+> next build
+
+   Creating an optimized production build ...
+
+> Build error occurred
+Error: Cannot find module 'postcss'
+Require stack:
+- C:\Users\admin\Documents\Projects\ivo-tech.com\ivo-tech-web\node_modules\.pnpm\next@13.5.6_@babel+core@7.28.0_supports-color@8.1.1__babel-plugin-macros@2.8.0_react-dom@18.3_w4uush5zi3yoxebwpnu3lbfiea\node_modules\next\dist\build\webpack\plugins\font-stylesheet-gathering-plugin.js
+- C:\Users\admin\Documents\Projects\ivo-tech.com\ivo-tech-web\node_modules\.pnpm\next@13.5.6_@babel+core@7.28.0_supports-color@8.1.1__babel-plugin-macros@2.8.0_react-dom@18.3_w4uush5zi3yoxebwpnu3lbfiea\node_modules\next\dist\build\webpack-config.js
+- C:\Users\admin\Documents\Projects\ivo-tech.com\ivo-tech-web\node_modules\.pnpm\next@13.5.6_@babel+core@7.28.0_supports-color@8.1.1__babel-plugin-macros@2.8.0_react-dom@18.3_w4uush5zi3yoxebwpnu3lbfiea\node_modules\next\dist\build\webpack\plugins\next-trace-entrypoints-plugin.js
+- C:\Users\admin\Documents\Projects\ivo-tech.com\ivo-tech-web\node_modules\.pnpm\next@13.5.6_@babel+core@7.28.0_supports-color@8.1.1__babel-plugin-macros@2.8.0_react-dom@18.3_w4uush5zi3yoxebwpnu3lbfiea\node_modules\next\dist\build\collect-build-traces.js
+- C:\Users\admin\Documents\Projects\ivo-tech.com\ivo-tech-web\node_modules\.pnpm\next@13.5.6_@babel+core@7.28.0_supports-color@8.1.1__babel-plugin-macros@2.8.0_react-dom@18.3_w4uush5zi3yoxebwpnu3lbfiea\node_modules\next\dist\build\index.js
+- C:\Users\admin\Documents\Projects\ivo-tech.com\ivo-tech-web\node_modules\.pnpm\next@13.5.6_@babel+core@7.28.0_supports-color@8.1.1__babel-plugin-macros@2.8.0_react-dom@18.3_w4uush5zi3yoxebwpnu3lbfiea\node_modules\next\dist\cli\next-build.js
+- C:\Users\admin\Documents\Projects\ivo-tech.com\ivo-tech-web\node_modules\.pnpm\next@13.5.6_@babel+core@7.28.0_supports-color@8.1.1__babel-plugin-macros@2.8.0_react-dom@18.3_w4uush5zi3yoxebwpnu3lbfiea\node_modules\next\dist\lib\commands.js
+- C:\Users\admin\Documents\Projects\ivo-tech.com\ivo-tech-web\node_modules\.pnpm\next@13.5.6_@babel+core@7.28.0_supports-color@8.1.1__babel-plugin-macros@2.8.0_react-dom@18.3_w4uush5zi3yoxebwpnu3lbfiea\node_modules\next\dist\bin\next
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1144:15)
+    at C:\Users\admin\Documents\Projects\ivo-tech.com\ivo-tech-web\node_modules\.pnpm\next@13.5.6_@babel+core@7.28.0_supports-color@8.1.1__babel-plugin-macros@2.8.0_react-dom@18.3_w4uush5zi3yoxebwpnu3lbfiea\node_modules\next\dist\server\require-hook.js:54:36
+    at Module._load (node:internal/modules/cjs/loader:985:27)
+    at Module.require (node:internal/modules/cjs/loader:1235:19)
+    at mod.require (C:\Users\admin\Documents\Projects\ivo-tech.com\ivo-tech-web\node_modules\.pnpm\next@13.5.6_@babel+core@7.28.0_supports-color@8.1.1__babel-plugin-macros@2.8.0_react-dom@18.3_w4uush5zi3yoxebwpnu3lbfiea\node_modules\next\dist\server\require-hook.js:64:28)
+    at require (node:internal/modules/helpers:176:18)
+    at Object.<anonymous> (C:\Users\admin\Documents\Projects\ivo-tech.com\ivo-tech-web\node_modules\.pnpm\next@13.5.6_@babel+core@7.28.0_supports-color@8.1.1__babel-plugin-macros@2.8.0_react-dom@18.3_w4uush5zi3yoxebwpnu3lbfiea\node_modules\next\dist\build\webpack\plugins\font-stylesheet-gathering-plugin.js:13:57)
+    at Module._compile (node:internal/modules/cjs/loader:1376:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+    at Module.load (node:internal/modules/cjs/loader:1207:32) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    'C:\\Users\\admin\\Documents\\Projects\\ivo-tech.com\\ivo-tech-web\\node_modules\\.pnpm\\next@13.5.6_@babel+core@7.28.0_supports-color@8.1.1__babel-plugin-macros@2.8.0_react-dom@18.3_w4uush5zi3yoxebwpnu3lbfiea\\node_modules\\next\\dist\\build\\webpack\\plugins\\font-stylesheet-gathering-plugin.js',
+    'C:\\Users\\admin\\Documents\\Projects\\ivo-tech.com\\ivo-tech-web\\node_modules\\.pnpm\\next@13.5.6_@babel+core@7.28.0_supports-color@8.1.1__babel-plugin-macros@2.8.0_react-dom@18.3_w4uush5zi3yoxebwpnu3lbfiea\\node_modules\\next\\dist\\build\\webpack-config.js',
+    'C:\\Users\\admin\\Documents\\Projects\\ivo-tech.com\\ivo-tech-web\\node_modules\\.pnpm\\next@13.5.6_@babel+core@7.28.0_supports-color@8.1.1__babel-plugin-macros@2.8.0_react-dom@18.3_w4uush5zi3yoxebwpnu3lbfiea\\node_modules\\next\\dist\\build\\webpack\\plugins\\next-trace-entrypoints-plugin.js',
+    'C:\\Users\\admin\\Documents\\Projects\\ivo-tech.com\\ivo-tech-web\\node_modules\\.pnpm\\next@13.5.6_@babel+core@7.28.0_supports-color@8.1.1__babel-plugin-macros@2.8.0_react-dom@18.3_w4uush5zi3yoxebwpnu3lbfiea\\node_modules\\next\\dist\\build\\collect-build-traces.js',
+    'C:\\Users\\admin\\Documents\\Projects\\ivo-tech.com\\ivo-tech-web\\node_modules\\.pnpm\\next@13.5.6_@babel+core@7.28.0_supports-color@8.1.1__babel-plugin-macros@2.8.0_react-dom@18.3_w4uush5zi3yoxebwpnu3lbfiea\\node_modules\\next\\dist\\build\\index.js',
+    'C:\\Users\\admin\\Documents\\Projects\\ivo-tech.com\\ivo-tech-web\\node_modules\\.pnpm\\next@13.5.6_@babel+core@7.28.0_supports-color@8.1.1__babel-plugin-macros@2.8.0_react-dom@18.3_w4uush5zi3yoxebwpnu3lbfiea\\node_modules\\next\\dist\\cli\\next-build.js',
+    'C:\\Users\\admin\\Documents\\Projects\\ivo-tech.com\\ivo-tech-web\\node_modules\\.pnpm\\next@13.5.6_@babel+core@7.28.0_supports-color@8.1.1__babel-plugin-macros@2.8.0_react-dom@18.3_w4uush5zi3yoxebwpnu3lbfiea\\node_modules\\next\\dist\\lib\\commands.js',
+    'C:\\Users\\admin\\Documents\\Projects\\ivo-tech.com\\ivo-tech-web\\node_modules\\.pnpm\\next@13.5.6_@babel+core@7.28.0_supports-color@8.1.1__babel-plugin-macros@2.8.0_react-dom@18.3_w4uush5zi3yoxebwpnu3lbfiea\\node_modules\\next\\dist\\bin\\next'
+  ]
+}
+ ELIFECYCLE  Command failed with exit code 1.
