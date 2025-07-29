@@ -1,10 +1,8 @@
-'use client';
-
-import { SessionProvider } from 'next-auth/react';
 import type { Metadata } from 'next';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import ErrorBoundary from '../components/ErrorBoundary';
+import ClientProvider from '../components/ClientProvider';
 import './globals.css';
 
 export const metadata: Metadata = {
@@ -26,13 +24,13 @@ export default function RootLayout({
         />
       </head>
       <body className='min-h-screen flex flex-col font-sans antialiased'>
-        <SessionProvider>
+        <ClientProvider>
           <Navigation />
           <ErrorBoundary>
             <div className='flex-1 pt-16'>{children}</div>
           </ErrorBoundary>
           <Footer />
-        </SessionProvider>
+        </ClientProvider>
       </body>
     </html>
   );
