@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import TestError from '@/components/TestError';
 
 export default function Home() {
   return (
@@ -23,13 +24,13 @@ export default function Home() {
             <div className="flex justify-center gap-4">
               <Link 
                 href="/kontakt"
-                className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors"
+                className="bg-primary-600 text-white px-8 py-3 rounded-lg hover:bg-primary-700 transition-colors font-semibold animate-fade-in"
               >
                 Kontakt aufnehmen
               </Link>
               <Link 
                 href="/leistungen"
-                className="bg-white text-blue-600 px-8 py-3 rounded-lg border-2 border-blue-600 hover:bg-blue-50 transition-colors"
+                className="bg-white text-primary-600 px-8 py-3 rounded-lg border-2 border-primary-600 hover:bg-primary-50 transition-colors font-semibold animate-fade-in delay-100"
               >
                 Unsere Leistungen
               </Link>
@@ -41,6 +42,17 @@ export default function Home() {
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute -top-1/4 -right-1/4 w-1/2 h-1/2 bg-blue-100 rounded-full blur-3xl opacity-20" />
           <div className="absolute -bottom-1/4 -left-1/4 w-1/2 h-1/2 bg-blue-200 rounded-full blur-3xl opacity-20" />
+        </div>
+      </section>
+
+      {/* Test Error Section */}
+      <section className="py-12 bg-gray-50 border-y border-gray-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Error Boundary Test</h2>
+            <p className="text-gray-600 mb-6">Klicken Sie den Button, um die Error Boundary zu testen</p>
+            <TestError />
+          </div>
         </div>
       </section>
 

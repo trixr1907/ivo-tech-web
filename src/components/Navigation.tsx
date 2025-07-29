@@ -16,10 +16,10 @@ export default function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="fixed w-full bg-white z-50 shadow-sm">
+    <header className="fixed w-full bg-white/95 backdrop-blur-sm z-50 shadow-sm border-b border-gray-200">
       <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
         <div className="flex lg:flex-1">
-          <Link href="/" className="-m-1.5 p-1.5 text-2xl font-bold">
+          <Link href="/" className="-m-1.5 p-1.5 text-2xl font-bold text-primary-600 hover:text-primary-700 transition-colors">
             Ivo Tech
           </Link>
         </div>
@@ -38,7 +38,7 @@ export default function Navigation() {
             <Link
               key={item.name}
               href={item.href}
-              className="text-sm font-semibold leading-6 text-gray-900 hover:text-blue-600 transition-colors"
+              className="text-sm font-semibold leading-6 text-gray-900 hover:text-primary-600 transition-colors"
             >
               {item.name}
             </Link>

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
+import ErrorBoundary from '../components/ErrorBoundary'
 
 export const metadata: Metadata = {
   title: 'Ivo Tech',
@@ -19,9 +20,11 @@ export default function RootLayout({
       </head>
       <body className="min-h-screen flex flex-col font-sans antialiased">
         <Navigation />
-        <div className="flex-1 pt-16">
-          {children}
-        </div>
+        <ErrorBoundary>
+          <div className="flex-1 pt-16">
+            {children}
+          </div>
+        </ErrorBoundary>
         <Footer />
       </body>
     </html>
