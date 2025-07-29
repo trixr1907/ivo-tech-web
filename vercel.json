@@ -3,5 +3,9 @@
   "buildCommand": "next build",
   "installCommand": "npm install",
   "framework": "nextjs",
-  "name": "ivo-tech-web-next"
+  "github": {
+    "enabled": true,
+    "silent": true,
+    "autoAlias": true
+  }
 }
