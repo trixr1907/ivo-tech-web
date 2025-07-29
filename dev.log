@@ -1,0 +1,14 @@
+
+> ivo-tech-zone@0.1.0 dev
+> next dev
+
+   Ôû▓ Next.js 14.0.4
+   - Local:        http://localhost:3000
+   - Environments: .env.local, .env
+
+ Ô£ô Ready in 2.7s
+ Ôùï Compiling /not-found ...
+ Ô£ô Compiled /not-found in 2.2s (1143 modules)
+ Ô£ô Compiled in 338ms (577 modules)
+ Ô£ô Compiled /src/middleware in 193ms (165 modules)
+ Ô£ô Compiled /dashboard in 502ms (1135 modules)

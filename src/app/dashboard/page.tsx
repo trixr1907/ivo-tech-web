@@ -5,6 +5,9 @@ import { useSession } from 'next-auth/react';
 export default function DashboardPage() {
   const { data: session, status } = useSession();
 
+  console.log('Session Status:', status);
+  console.log('Session Data:', session);
+
   if (status === 'loading') {
     return (
       <div className='min-h-screen flex items-center justify-center'>
@@ -31,8 +34,7 @@ export default function DashboardPage() {
           {session.user?.image && (
             <img
               src={session.user.image}
-              alt={session.user.name || \
-Avatar\}
+              alt={session.user.name || 'Avatar'}
               className='h-12 w-12 rounded-full'
             />
           )}
@@ -46,7 +48,9 @@ Avatar\}
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
             <div className='bg-gray-50 p-4 rounded-lg'>
               <h4 className='font-medium'>Letzte Aktivität</h4>
-              <p className='text-gray-600'>Anmeldung am {new Date().toLocaleDateString(\de-DE\)}</p>
+              <p className='text-gray-600'>
+                Anmeldung am {new Date().toLocaleDateString('de-DE')}
+              </p>
             </div>
             <div className='bg-gray-50 p-4 rounded-lg'>
               <h4 className='font-medium'>Status</h4>
