@@ -2,6 +2,7 @@ import { NextResponse } from 'next/server'
 import { contactFormSchema } from '@/lib/validations/contact'
 import { Ratelimit } from '@upstash/ratelimit'
 import { Redis } from '@upstash/redis'
+import { ZodError } from 'zod'
 
 // Rate Limiting Setup
 const redis = new Redis({
@@ -34,8 +35,8 @@ export async function POST(req: Request) {
     // Beispiel mit nodemailer oder einem anderen E-Mail-Service
 
     return NextResponse.json({ message: 'Nachricht erfolgreich gesendet' })
-  } catch (error) {
-    if (error.errors) {
+} catch (error) {
+    if (error instanceof ZodError) {
       return NextResponse.json({ error: error.errors[0].message }, { status: 400 })
     }
     return NextResponse.json(
