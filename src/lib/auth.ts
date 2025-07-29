@@ -1,40 +1,33 @@
-import { PrismaAdapter } from "@next-auth/prisma-adapter";
+import NextAuth from "next-auth";
+import { PrismaAdapter } from "@auth/prisma-adapter";
 import { PrismaClient } from "@prisma/client";
-import { NextAuthOptions } from "next-auth";
-import { DefaultSession } from "next-auth";
-import GithubProvider from "next-auth/providers/github";
-
-declare module "next-auth" {
-  interface Session extends DefaultSession {
-    user?: {
-      id?: string;
-    } & DefaultSession["user"];
-  }
-}
+import GitHub from "next-auth/providers/github";
 
 const prisma = new PrismaClient();
 
-export const authOptions: NextAuthOptions = {
+export const { handlers, auth, signIn, signOut } = NextAuth({
   adapter: PrismaAdapter(prisma),
   providers: [
-    GithubProvider({
-      clientId: process.env.GITHUB_ID as string,
-      clientSecret: process.env.GITHUB_SECRET as string,
+    GitHub({
+      clientId: process.env.GITHUB_ID,
+      clientSecret: process.env.GITHUB_SECRET,
     }),
   ],
   secret: process.env.NEXTAUTH_SECRET,
   session: {
-    strategy: 'jwt'
+    strategy: "jwt",
   },
   pages: {
-    signIn: '/auth/signin',
+    signIn: "/auth/signin",
   },
   callbacks: {
     async session({ session, token }) {
       if (session?.user) {
-        session.user.id = token.sub as string;
+        session.user.id = token.sub;
       }
       return session;
     },
   },
-};
+});
+
+export type Auth = typeof auth;
