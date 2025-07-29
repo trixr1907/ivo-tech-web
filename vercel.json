@@ -3,16 +3,5 @@
   "builds": [{
     "src": "package.json",
     "use": "@vercel/next"
-  }],
-  "routes": [
-    { "src": "/api/(.*)", "dest": "/api/$1" },
-    { "handle": "filesystem" },
-    { "src": "/(.*)", "dest": "/" }
-  ],
-  "env": {
-    "NEXTAUTH_SECRET": "@nextauth_secret",
-    "NEXTAUTH_URL": "@nextauth_url",
-    "GITHUB_ID": "@github_id",
-    "GITHUB_SECRET": "@github_secret"
-  }
+  }]
 }
