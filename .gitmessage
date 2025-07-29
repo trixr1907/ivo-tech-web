@@ -1,0 +1,31 @@
+# Titel (50 Zeichen oder weniger)
+
+# Optional: Ausführlichere Erklärung (Zeilen mit 72 Zeichen umbrechen)
+# 
+# - Was wurde geändert?
+# - Warum wurde es geändert?
+# - Welche Auswirkungen hat die Änderung?
+
+# Referenzen
+# Fixes: #123
+# Related to: #456
+# Breaking Change: ja/nein
+
+# Commit-Typen:
+# feat:     Neue Funktionalität
+# fix:      Fehlerbehebung
+# docs:     Dokumentationsänderungen
+# style:    Formatierung, fehlende Semikolons, etc.
+# refactor: Code-Überarbeitung ohne Funktionsänderung
+# test:     Tests hinzufügen/ändern
+# chore:    Builds, Abhängigkeiten, Konfiguration etc.
+
+# Beispiel eines guten Commit-Messages:
+# feat: Implementiere deutsche Benutzerschnittstelle
+# 
+# - Füge Übersetzungen für alle UI-Elemente hinzu
+# - Implementiere Sprach-Switcher in der Navigation
+# - Stelle sicher, dass alle Formulare lokalisiert sind
+# 
+# Fixes: #234
+# Breaking Change: nein

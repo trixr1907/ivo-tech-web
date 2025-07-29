@@ -1,41 +1,18 @@
- WARN  Unsupported engine: wanted: {"node":"22.x"} (current: {"node":"v20.11.1","pnpm":"9.0.0"})
 
-> @repo/ui@0.0.0 build C:\Users\admin\Documents\Projects\ivo-tech.com\ivo-tech-web\packages\ui
-> next build
+> @ui/components@0.1.0 build
+> tsup src/index.tsx --format cjs,esm --dts --external react
 
-   Creating an optimized production build ...
-
-> Build error occurred
-Error: Cannot find module 'postcss'
-Require stack:
-- C:\Users\admin\Documents\Projects\ivo-tech.com\ivo-tech-web\node_modules\.pnpm\next@13.5.6_@babel+core@7.28.0_supports-color@8.1.1__babel-plugin-macros@2.8.0_react-dom@18.3_w4uush5zi3yoxebwpnu3lbfiea\node_modules\next\dist\build\webpack\plugins\font-stylesheet-gathering-plugin.js
-- C:\Users\admin\Documents\Projects\ivo-tech.com\ivo-tech-web\node_modules\.pnpm\next@13.5.6_@babel+core@7.28.0_supports-color@8.1.1__babel-plugin-macros@2.8.0_react-dom@18.3_w4uush5zi3yoxebwpnu3lbfiea\node_modules\next\dist\build\webpack-config.js
-- C:\Users\admin\Documents\Projects\ivo-tech.com\ivo-tech-web\node_modules\.pnpm\next@13.5.6_@babel+core@7.28.0_supports-color@8.1.1__babel-plugin-macros@2.8.0_react-dom@18.3_w4uush5zi3yoxebwpnu3lbfiea\node_modules\next\dist\build\webpack\plugins\next-trace-entrypoints-plugin.js
-- C:\Users\admin\Documents\Projects\ivo-tech.com\ivo-tech-web\node_modules\.pnpm\next@13.5.6_@babel+core@7.28.0_supports-color@8.1.1__babel-plugin-macros@2.8.0_react-dom@18.3_w4uush5zi3yoxebwpnu3lbfiea\node_modules\next\dist\build\collect-build-traces.js
-- C:\Users\admin\Documents\Projects\ivo-tech.com\ivo-tech-web\node_modules\.pnpm\next@13.5.6_@babel+core@7.28.0_supports-color@8.1.1__babel-plugin-macros@2.8.0_react-dom@18.3_w4uush5zi3yoxebwpnu3lbfiea\node_modules\next\dist\build\index.js
-- C:\Users\admin\Documents\Projects\ivo-tech.com\ivo-tech-web\node_modules\.pnpm\next@13.5.6_@babel+core@7.28.0_supports-color@8.1.1__babel-plugin-macros@2.8.0_react-dom@18.3_w4uush5zi3yoxebwpnu3lbfiea\node_modules\next\dist\cli\next-build.js
-- C:\Users\admin\Documents\Projects\ivo-tech.com\ivo-tech-web\node_modules\.pnpm\next@13.5.6_@babel+core@7.28.0_supports-color@8.1.1__babel-plugin-macros@2.8.0_react-dom@18.3_w4uush5zi3yoxebwpnu3lbfiea\node_modules\next\dist\lib\commands.js
-- C:\Users\admin\Documents\Projects\ivo-tech.com\ivo-tech-web\node_modules\.pnpm\next@13.5.6_@babel+core@7.28.0_supports-color@8.1.1__babel-plugin-macros@2.8.0_react-dom@18.3_w4uush5zi3yoxebwpnu3lbfiea\node_modules\next\dist\bin\next
-    at Module._resolveFilename (node:internal/modules/cjs/loader:1144:15)
-    at C:\Users\admin\Documents\Projects\ivo-tech.com\ivo-tech-web\node_modules\.pnpm\next@13.5.6_@babel+core@7.28.0_supports-color@8.1.1__babel-plugin-macros@2.8.0_react-dom@18.3_w4uush5zi3yoxebwpnu3lbfiea\node_modules\next\dist\server\require-hook.js:54:36
-    at Module._load (node:internal/modules/cjs/loader:985:27)
-    at Module.require (node:internal/modules/cjs/loader:1235:19)
-    at mod.require (C:\Users\admin\Documents\Projects\ivo-tech.com\ivo-tech-web\node_modules\.pnpm\next@13.5.6_@babel+core@7.28.0_supports-color@8.1.1__babel-plugin-macros@2.8.0_react-dom@18.3_w4uush5zi3yoxebwpnu3lbfiea\node_modules\next\dist\server\require-hook.js:64:28)
-    at require (node:internal/modules/helpers:176:18)
-    at Object.<anonymous> (C:\Users\admin\Documents\Projects\ivo-tech.com\ivo-tech-web\node_modules\.pnpm\next@13.5.6_@babel+core@7.28.0_supports-color@8.1.1__babel-plugin-macros@2.8.0_react-dom@18.3_w4uush5zi3yoxebwpnu3lbfiea\node_modules\next\dist\build\webpack\plugins\font-stylesheet-gathering-plugin.js:13:57)
-    at Module._compile (node:internal/modules/cjs/loader:1376:14)
-    at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
-    at Module.load (node:internal/modules/cjs/loader:1207:32) {
-  code: 'MODULE_NOT_FOUND',
-  requireStack: [
-    'C:\\Users\\admin\\Documents\\Projects\\ivo-tech.com\\ivo-tech-web\\node_modules\\.pnpm\\next@13.5.6_@babel+core@7.28.0_supports-color@8.1.1__babel-plugin-macros@2.8.0_react-dom@18.3_w4uush5zi3yoxebwpnu3lbfiea\\node_modules\\next\\dist\\build\\webpack\\plugins\\font-stylesheet-gathering-plugin.js',
-    'C:\\Users\\admin\\Documents\\Projects\\ivo-tech.com\\ivo-tech-web\\node_modules\\.pnpm\\next@13.5.6_@babel+core@7.28.0_supports-color@8.1.1__babel-plugin-macros@2.8.0_react-dom@18.3_w4uush5zi3yoxebwpnu3lbfiea\\node_modules\\next\\dist\\build\\webpack-config.js',
-    'C:\\Users\\admin\\Documents\\Projects\\ivo-tech.com\\ivo-tech-web\\node_modules\\.pnpm\\next@13.5.6_@babel+core@7.28.0_supports-color@8.1.1__babel-plugin-macros@2.8.0_react-dom@18.3_w4uush5zi3yoxebwpnu3lbfiea\\node_modules\\next\\dist\\build\\webpack\\plugins\\next-trace-entrypoints-plugin.js',
-    'C:\\Users\\admin\\Documents\\Projects\\ivo-tech.com\\ivo-tech-web\\node_modules\\.pnpm\\next@13.5.6_@babel+core@7.28.0_supports-color@8.1.1__babel-plugin-macros@2.8.0_react-dom@18.3_w4uush5zi3yoxebwpnu3lbfiea\\node_modules\\next\\dist\\build\\collect-build-traces.js',
-    'C:\\Users\\admin\\Documents\\Projects\\ivo-tech.com\\ivo-tech-web\\node_modules\\.pnpm\\next@13.5.6_@babel+core@7.28.0_supports-color@8.1.1__babel-plugin-macros@2.8.0_react-dom@18.3_w4uush5zi3yoxebwpnu3lbfiea\\node_modules\\next\\dist\\build\\index.js',
-    'C:\\Users\\admin\\Documents\\Projects\\ivo-tech.com\\ivo-tech-web\\node_modules\\.pnpm\\next@13.5.6_@babel+core@7.28.0_supports-color@8.1.1__babel-plugin-macros@2.8.0_react-dom@18.3_w4uush5zi3yoxebwpnu3lbfiea\\node_modules\\next\\dist\\cli\\next-build.js',
-    'C:\\Users\\admin\\Documents\\Projects\\ivo-tech.com\\ivo-tech-web\\node_modules\\.pnpm\\next@13.5.6_@babel+core@7.28.0_supports-color@8.1.1__babel-plugin-macros@2.8.0_react-dom@18.3_w4uush5zi3yoxebwpnu3lbfiea\\node_modules\\next\\dist\\lib\\commands.js',
-    'C:\\Users\\admin\\Documents\\Projects\\ivo-tech.com\\ivo-tech-web\\node_modules\\.pnpm\\next@13.5.6_@babel+core@7.28.0_supports-color@8.1.1__babel-plugin-macros@2.8.0_react-dom@18.3_w4uush5zi3yoxebwpnu3lbfiea\\node_modules\\next\\dist\\bin\\next'
-  ]
-}
- ELIFECYCLE  Command failed with exit code 1.
+[34mCLI[39m Building entry: src/index.tsx
+[34mCLI[39m Using tsconfig: tsconfig.json
+[34mCLI[39m tsup v7.2.0
+[34mCLI[39m Target: es5
+[34mCJS[39m Build start
+[34mESM[39m Build start
+[32mESM[39m [1mdist\index.mjs [22m[32m508.00 B[39m
+[32mESM[39m ⚡️ Build success in 38ms
+[32mCJS[39m [1mdist\index.js [22m[32m3.44 KB[39m
+[32mCJS[39m ⚡️ Build success in 40ms
+[34mDTS[39m Build start
+[32mDTS[39m ⚡️ Build success in 1475ms
+[32mDTS[39m [1mdist\index.d.ts  [22m[32m273.00 B[39m
+[32mDTS[39m [1mdist\index.d.mts [22m[32m273.00 B[39m

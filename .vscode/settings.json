@@ -1,0 +1,18 @@
+{
+  // Deutsche Rechtschreibprüfung
+  "cSpell.language": "de,en",
+  "cSpell.userWords": [],
+  "cSpell.enabled": true,
+  
+  // Editor Konfiguration
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  
+  // Prettier Konfiguration
+  "prettier.tabWidth": 2,
+  "prettier.singleQuote": true,
+  
+  // TypeScript/JavaScript spezifische Einstellungen
+  "javascript.suggest.completeFunctionCalls": true,
+  "typescript.suggest.completeFunctionCalls": true
+}

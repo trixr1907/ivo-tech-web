@@ -1,7 +1,0 @@
-
-> docs@0.1.0 lint C:\Users\admin\Documents\Projects\ivo-tech.com\ivo-tech-web\apps\docs
-> next lint
-
-Der Befehl "next" ist entweder falsch geschrieben oder
-konnte nicht gefunden werden.
- ELIFECYCLE  Command failed with exit code 1.
