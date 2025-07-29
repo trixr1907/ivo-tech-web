@@ -17,18 +17,18 @@ class ErrorBoundary extends Component<Props, State> {
   };
 
   static getDerivedStateFromError(): State {
-    // Update state so the next render will show the fallback UI.
+    // Aktualisiert den State, damit beim nächsten Rendern die Fallback-UI angezeigt wird
     return { hasError: true };
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    // You can also log the error to an error reporting service
-    console.error("Uncaught error:", error, errorInfo);
+    // Protokolliert den Fehler und kann optional an einen Error-Reporting-Service gesendet werden
+    console.error("Nicht behandelter Fehler:", error, errorInfo);
   }
 
   render() {
     if (this.state.hasError) {
-      // You can render any custom fallback UI
+      // Zeigt die benutzerdefinierte Fehlerseite an
       return <ErrorPage />;
     }
 

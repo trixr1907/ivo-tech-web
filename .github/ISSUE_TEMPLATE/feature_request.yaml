@@ -1,0 +1,62 @@
+name: 💡 Feature-Vorschlag
+description: Schlage eine neue Funktion oder Verbesserung vor
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Danke für deinen Feature-Vorschlag! Bitte fülle das folgende Formular aus.
+  
+  - type: textarea
+    id: problem
+    attributes:
+      label: Beschreibe das Problem
+      description: Ist dein Feature-Vorschlag mit einem Problem verbunden? Bitte beschreibe es.
+      placeholder: "Ich bin immer frustriert, wenn..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Beschreibe die gewünschte Lösung
+      description: Was soll die neue Funktionalität können?
+      placeholder: "Die Funktion sollte..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternative Lösungen
+      description: Beschreibe alternative Lösungen oder Features, die du in Betracht gezogen hast.
+      placeholder: "Eine Alternative wäre..."
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priorität
+      description: Wie wichtig ist dieses Feature für dich?
+      options:
+        - Kritisch (Blockiert die Arbeit)
+        - Hoch (Wichtig für die Produktivität)
+        - Mittel (Wäre sehr hilfreich)
+        - Niedrig (Nice to have)
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Zusätzlicher Kontext
+      description: Füge weitere Informationen oder Screenshots zum Feature-Vorschlag hinzu.
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Bestätigung
+      description: 
+      options:
+        - label: Ich habe überprüft, dass ein ähnlicher Feature-Vorschlag nicht bereits existiert
+          required: true

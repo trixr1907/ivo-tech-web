@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "composite": true,
+    "declaration": true,
+    "noEmit": false,
+    "outDir": "dist",
+    "module": "ESNext",
+    "target": "ES2017",
+    "jsx": "preserve",
+    "baseUrl": ".",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "paths": {}
+  },
+  "include": ["tailwind/**/*.ts", "tsconfig/**/*.json"]
+}

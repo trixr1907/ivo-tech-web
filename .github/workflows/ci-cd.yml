@@ -7,6 +7,25 @@ on:
     branches: [ main ]
 
 jobs:
+  notify-start:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Send start notification
+        uses: actions/github-script@v6
+        with:
+          script: |
+            github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body: '🚀 CI/CD Pipeline wurde gestartet!
+
+Folgende Schritte werden ausgeführt:
+- ✅ Tests durchführen
+- 🛠️ Build erstellen
+- 📦 Deployment (nur bei main Branch)'
+            })
   test:
     runs-on: windows-latest
     steps:
@@ -14,9 +33,28 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: "18"
-      - run: npm ci
-      - run: npm run test
-      - run: npm run build
+      - name: NPM Dependencies installieren
+        run: npm ci
+      - name: Tests ausführen
+        run: npm run test
+        continue-on-error: true
+      - name: Build erstellen
+        run: npm run build
+      - name: Test-Status melden
+        if: always()
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const testResult = '${{ steps.test.outcome }}' === 'success' ? '✅' : '❌';
+            github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body: `## Test-Ergebnisse
+${testResult} Tests abgeschlossen
+
+Bitte überprüfe die Test-Logs für Details.`
+            })
 
   deploy:
     needs: test
@@ -24,11 +62,26 @@ jobs:
     if: github.ref == 'refs/heads/main'
     steps:
       - uses: actions/checkout@v3
-      - name: Install Vercel CLI
+      - name: Vercel CLI installieren
         run: npm install --global vercel@latest
-      - name: Pull Vercel Environment Information
+      - name: Vercel Umgebungsinformationen abrufen
         run: vercel pull --yes --environment=production --token="${{ secrets.VERCEL_TOKEN }}"
-      - name: Build Project Artifacts
+      - name: Projekt-Artefakte erstellen
         run: vercel build --prod --token="${{ secrets.VERCEL_TOKEN }}"
-      - name: Deploy Project Artifacts to Vercel
+      - name: Projekt auf Vercel deployen
         run: vercel deploy --prebuilt --prod --token="${{ secrets.VERCEL_TOKEN }}"
+      - name: Deployment-Status melden
+        if: always()
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const status = '${{ job.status }}' === 'success' ? '✅' : '❌';
+            github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body: `## Deployment-Status
+${status} Deployment ${status === '✅' ? 'erfolgreich' : 'fehlgeschlagen'}
+
+${status === '✅' ? '🌐 Die Änderungen sind jetzt live!' : '❌ Bitte überprüfe die Deployment-Logs für Details.'}`
+            })

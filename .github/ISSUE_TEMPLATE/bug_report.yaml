@@ -1,0 +1,71 @@
+name: 🐛 Fehlerbericht
+description: Erstelle einen Fehlerbericht, um uns bei der Verbesserung zu helfen
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Danke, dass du dir die Zeit nimmst, einen Fehler zu melden!
+  
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: Was ist passiert?
+      description: Beschreibe auch, was du stattdessen erwartet hättest.
+      placeholder: "Beschreibe den Fehler so detailliert wie möglich..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Schritte zur Reproduktion
+      description: Wie können wir das Problem nachstellen?
+      placeholder: |
+        1. Gehe zu '...'
+        2. Klicke auf '....'
+        3. Scrolle zu '....'
+        4. Siehe Fehler
+    validations:
+      required: true
+
+  - type: dropdown
+    id: browsers
+    attributes:
+      label: Browser
+      description: In welchen Browsern tritt der Fehler auf?
+      multiple: true
+      options:
+        - Firefox
+        - Chrome
+        - Safari
+        - Microsoft Edge
+        - Opera
+        - Andere
+
+  - type: dropdown
+    id: os
+    attributes:
+      label: Betriebssystem
+      multiple: true
+      options:
+        - Windows
+        - macOS
+        - Linux
+        - iOS
+        - Android
+        - Andere
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevante Logs
+      description: Füge relevante Log-Ausgaben oder Fehlermeldungen hinzu.
+      render: shell
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Zusätzliche Informationen
+      description: Füge weitere hilfreiche Informationen zum Problem hinzu (Screenshots, Videos etc.).
