@@ -3,11 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "prisma generate && next build",
+    "dev": "turbo run dev",
+    "build": "turbo run build",
     "start": "next start",
-    "lint": "next lint",
-    "test": "jest",
+    "lint": "turbo run lint",
+    "test": "turbo run test",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "cypress:open": "cypress open",
     "cypress:run": "cypress run"
   },
@@ -38,8 +39,37 @@
     "jest": "^29.7.0",
     "jest-environment-jsdom": "^30.0.5",
     "postcss": "^8.5.6",
+    "prettier": "^3.0.3",
     "prisma": "^5.7.0",
     "ts-jest": "29.1.1",
+    "turbo": "^2.5.5",
     "typescript": "^5.1.6"
+  },
+  "turbo": {
+    "baseBranch": "origin/main",
+    "pipeline": {
+      "build": {
+        "dependsOn": [
+          "^build"
+        ],
+        "outputs": [
+          ".next/**",
+          "!.next/cache/**"
+        ]
+      },
+      "test": {
+        "dependsOn": [
+          "^build"
+        ],
+        "outputs": [
+          "coverage/**"
+        ]
+      },
+      "lint": {},
+      "dev": {
+        "cache": false,
+        "persistent": true
+      }
+    }
   }
 }

@@ -3,8 +3,9 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   images: {
-    domains: [],
+    domains: ['avatars.githubusercontent.com'],
   },
+  output: 'standalone',
 }
 
 module.exports = nextConfig
