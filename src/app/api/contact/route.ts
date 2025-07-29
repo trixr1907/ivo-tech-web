@@ -36,8 +36,11 @@ export async function POST(req: Request) {
 
     return NextResponse.json({ message: 'Nachricht erfolgreich gesendet' })
 } catch (error) {
-    if (error instanceof ZodError) {
-      return NextResponse.json({ error: error.errors[0].message }, { status: 400 })
+    if (error instanceof ZodError && error.issues.length > 0) {
+      return NextResponse.json(
+        { error: error.issues[0].message },
+        { status: 400 }
+      )
     }
     return NextResponse.json(
       { error: 'Ein Fehler ist aufgetreten' },
